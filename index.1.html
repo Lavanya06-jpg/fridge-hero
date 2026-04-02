@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Optional: <meta name="gemini-api-key" content="YOUR_KEY" /> (do not commit real keys) -->
+    <title>Fridge Hero</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <section class="app-card" aria-labelledby="app-title">
+        <header class="app-header">
+          <h1 id="app-title">Fridge Hero 🍳</h1>
+          <p>Turn your ingredients into magic</p>
+        </header>
+
+        <form id="ingredients-form" class="ingredients-form" autocomplete="off">
+          <div class="form-group">
+            <label for="ingredient-1">Ingredient 1</label>
+            <input id="ingredient-1" name="ingredient1" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="ingredient-2">Ingredient 2</label>
+            <input id="ingredient-2" name="ingredient2" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="ingredient-3">Ingredient 3</label>
+            <input id="ingredient-3" name="ingredient3" type="text" />
+          </div>
+
+          <button type="submit">Cook Magic ✨</button>
+        </form>
+
+        <section id="result-card" class="result-card" hidden aria-live="polite">
+          <h2>Your Magic Recipe</h2>
+          <div id="result-text" class="result-text"></div>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      window.__GEMINI_API_KEY__ = "AIzaSyC6_JsOX9q91r5JKAMzYaLOyatmXuDBzoE";
+      // Local dev: assign your key here or inject from your environment/build step.
+      // window.__GEMINI_API_KEY__ = "";
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
